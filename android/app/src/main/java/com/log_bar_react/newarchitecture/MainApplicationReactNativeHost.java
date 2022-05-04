@@ -1,4 +1,4 @@
-package com.stage.newarchitecture;
+package com.log_bar_react.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.stage.BuildConfig;
-import com.stage.newarchitecture.components.MainComponentsRegistry;
-import com.stage.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.log_bar_react.BuildConfig;
+import com.log_bar_react.newarchitecture.components.MainComponentsRegistry;
+import com.log_bar_react.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

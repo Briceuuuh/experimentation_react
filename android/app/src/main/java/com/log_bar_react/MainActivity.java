@@ -1,4 +1,4 @@
-package com.stage;
+package com.log_bar_react;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -12,7 +12,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "stage";
+    return "log_bar_react";
   }
 
   /**

@@ -1,4 +1,4 @@
-package com.stage.newarchitecture.components;
+package com.log_bar_react.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

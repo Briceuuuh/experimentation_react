@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.stage">
+  package="com.log_bar_react">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
