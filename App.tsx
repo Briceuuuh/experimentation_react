@@ -1,21 +1,30 @@
 import React from "react";
-import {View, Text, StyleSheet, Button, TextInput, ScrollView, ImageBackground} from "react-native";
+import back from "./background.png";
+import {View, Text, StyleSheet, Button, TextInput, ScrollView, ImageBackground, Pressable, Alert} from "react-native";
+const image = { img: "./background.jpg" };
 
 const App = () => {
   return (
     <View style={styles.container}>
+      <ImageBackground source={back} resizeMode="cover" style={styles.image}>
       <TextInput
         style={styles.input}
         placeholder="Your name"
+        placeholderTextColor="black"
       />
       <TextInput
-      secureTextEntry={true}
         style={styles.input}
+        secureTextEntry={true}
         placeholder="Password"
+        placeholderTextColor="black"
       />
+      <View style={styles.button}>
       <Button
-        title="Login"
-      />
+      title="Login"
+      color="black"
+      onPress={() => Alert.alert("I don't know how to make a DataBase at the moment...\nBut not for long")}
+      /></View>
+      </ImageBackground>
     </View>
   );
 };
@@ -24,14 +33,27 @@ export default App;
 
 const styles = StyleSheet.create({
   container: {
-    height: 70,
-    margin: 50,
-    padding: 10,
+    flex: 1,
+  },
+  image: {
+    flex: 1,
   },
   input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
+    top: 90,
+    fontSize: 17,
+    height: 55,
+    margin: 20,
+    borderWidth: 3,
     padding: 10,
+    borderRadius: 10,
   },
+  button: {
+    top: 90,
+    height: 55,
+    margin: 20,
+    borderWidth: 3,
+    paddingVertical: 0,
+    borderRadius: 50,
+    fontSize: 20,
+},
 });
