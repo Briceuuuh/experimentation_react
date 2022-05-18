@@ -38,7 +38,7 @@ const App = () => {
           tabBarInactiveTintColor: '#FFFFFF',
         })}
       >
-        <Tab.Screen name="Mes " component={Card}/>
+        <Tab.Screen name="Mes cartes" component={Card}/>
         <Tab.Screen name="Rechercher" component={Search}/>
         <Tab.Screen name=" " component={Drawer}/>
         <Tab.Screen name="Notification" component={Notif}/>
