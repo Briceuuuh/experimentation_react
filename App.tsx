@@ -15,25 +15,13 @@ const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        screenOptions={({ route }) => ({
-          /* tabBarIcon: ({ focused, color }) => {
-            let iconName;
-            if (route.name === 'Mes cartes') {
-              iconName = focused ? 'ios-information-circle' : 'ios-information-circle-outline';
-            } else if (route.name === 'Rechercher') {
-              iconName = focused ? 'BsSearch' : 'ios-list';
-            } else if (route.name === ' ') {
-              iconName = focused ? 'person-circle' : 'ios-list';
-            } else if (route.name === 'Notification') {
-              iconName = focused ? 'person-circle' : 'ios-list';
-            } else if (route.name === 'Profil') {
-              iconName = focused ? 'ios-list-box' : 'iperson-circlet';
-            }
-            //return <Ionicons name={iconName} size={20} color={color} />;
-          }, */
+        screenOptions={({}) => ({
           tabBarStyle: {
             backgroundColor: '#035A5A',
+            borderRadius: 24,
+            borderColor: '#033E3E',
           },
+          headerShown: false,
           tabBarActiveTintColor: '#FDC80B',
           tabBarInactiveTintColor: '#FFFFFF',
         })}
