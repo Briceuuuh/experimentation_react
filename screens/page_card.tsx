@@ -10,27 +10,41 @@ const Card = () => {
       <View style={styles.container}>
         <View style={styles.center_container}>
           <ScrollView>
-              {/* <Image style={styles.image_profil} source={require("./../me.png")}/> */}
+              <Pressable onPress={() => Alert.alert("Le Bistrot...")}>
+                <View style={styles.button_card}>
+                  <Text style={styles.text_restaurant}>Le bistrot des pêcheurs</Text>
+                  <Text style={styles.text_date}>{date}</Text>
+                  <Image style={styles.image_card} source={require("./../eat.png")}/>
+                </View>
+              </Pressable>
+            <Pressable onPress={() => Alert.alert("Chez Jacky...")}>
               <View style={styles.button_card}>
-                <Button title='Le bistrot des pêcheurs' color="white"/>
+                <Text style={styles.text_restaurant}>Chez Jacky</Text>
                 <Text style={styles.text_date}>{date}</Text>
+                <Image style={styles.image_card} source={require("./../burger.png")}/>
               </View>
-            <View style={styles.button_card}>
-              <Button title='Chez Jacky'/>
-              <Text style={styles.text_date}>{date}</Text>
-            </View>
-            <View style={styles.button_card}>
-              <Button title='La Buse'/>
-              <Text style={styles.text_date}>{date}</Text>
-            </View>
-            <View style={styles.button_card}>
-              <Button title='La bonne assiette'/>
-              <Text style={styles.text_date}>{date}</Text>
-            </View>
-            <View style={styles.button_card}>
-              <Button title='Le bistrot des pêcheurs'/>
-              <Text style={styles.text_date}>{date}</Text>
-            </View>
+            </Pressable>
+            <Pressable onPress={() => Alert.alert("La buse...")}>
+              <View style={styles.button_card}>
+                <Text style={styles.text_restaurant}>La Buse</Text>
+                <Text style={styles.text_date}>{date}</Text>
+                <Image style={styles.image_card} source={require("./../eat.png")}/>
+              </View>
+            </Pressable>
+            <Pressable onPress={() => Alert.alert("La bonne assiette...")}>
+              <View style={styles.button_card}>
+                <Text style={styles.text_restaurant}>La bonne assiette</Text>
+                <Text style={styles.text_date}>{date}</Text>
+                <Image style={styles.image_card} source={require("./../burger.png")}/>
+              </View>
+            </Pressable>
+            <Pressable onPress={() => Alert.alert("Le bistrot...")}>
+              <View style={styles.button_card}>
+                <Text style={styles.text_restaurant}>Le bistrot des pêcheurs</Text>
+                <Text style={styles.text_date}>{date}</Text>
+                <Image style={styles.image_card} source={require("./../eat.png")}/>
+              </View>
+            </Pressable>
           </ScrollView>
         </View>
       </View>

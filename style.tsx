@@ -123,6 +123,15 @@ image_profil:{
     borderRadius: 16,
     alignSelf: "center"
 },
+image_card:{
+    position: "absolute",
+    top: -15,
+    left: -15,
+    width: 88,
+    height: 88,
+    borderRadius: 16,
+    opacity: 1,
+},
 dropdown:{
     position: "absolute",
     width: 113,
@@ -149,8 +158,16 @@ button_card:{
 },
 text_date:{
     color: "#F5C106",
+    top: 20,
     fontSize: 12,
-    marginLeft: 79,
+    marginLeft: 90,
+},
+text_restaurant:{
+    color: "white",
+    top: 8,
+    fontSize: 14,
+    marginLeft: 90,
+    fontWeight: "bold"
 }
 });
 
