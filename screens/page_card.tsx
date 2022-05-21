@@ -1,11 +1,19 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, Button, TextInput, ScrollView, Image, ImageBackground, Pressable, Alert} from "react-native";
 import styles from './../style';
+import DropDownPicker from 'react-native-dropdown-picker';
 
 const now = new Date();
 var date = `${now.getDate()}.${now.getMonth() + 1}.${now.getFullYear()}`;
 
 const Card = () => {
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState(null);
+  const [items, setItems] = useState([
+    {label: 'Récent', value: 'recent'},
+    {label: 'Ancien', value: 'old'},
+    {label: 'Nouveau', value: 'new'},
+  ]);
   return (
       <View style={styles.container}>
         <View style={styles.center_container}>
@@ -46,6 +54,16 @@ const Card = () => {
               </View>
             </Pressable>
           </ScrollView>
+        </View>
+        <View style={styles.container_drop}>
+          <DropDownPicker style={styles.drop_down}
+            open={open}
+            value={value}
+            items={items}
+            setOpen={setOpen}
+            setValue={setValue}
+            setItems={setItems}
+            />
         </View>
       </View>
     );

@@ -132,15 +132,6 @@ image_card:{
     borderRadius: 16,
     opacity: 1,
 },
-dropdown:{
-    position: "absolute",
-    width: 113,
-    height: 39,
-    top:74,
-    left:199,
-    borderRadius:16,
-    backgroundColor: "black"
-},
 center_container:{
     position: "absolute",
     top: 95,
@@ -168,6 +159,20 @@ text_restaurant:{
     fontSize: 14,
     marginLeft: 90,
     fontWeight: "bold"
+},
+container_drop:{
+    position: "absolute",
+    top: 55,
+    height: 39,
+    width: 113,
+},
+drop_down:{
+    position: "relative",
+    width: 113,
+    height: 39,
+    borderRadius: 16,
+    left: 117,
+    backgroundColor: "#F5C106"
 }
 });
 
