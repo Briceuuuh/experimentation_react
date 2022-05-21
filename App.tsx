@@ -8,6 +8,7 @@ import Drawer from './screens/page_drawer';
 import Card from './screens/page_card';
 import Search from './screens/page_search';
 import Notif from './screens/page_notif';
+import { View } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,7 +34,6 @@ const App = () => {
         <Tab.Screen name="Profil" component={Login} />
       </Tab.Navigator>
     </NavigationContainer>
-
   );
 };
 

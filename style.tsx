@@ -15,10 +15,13 @@ input: {
     top: 0,
     fontSize: 17,
     height: 55,
+    width: 335,
     margin: 20,
     borderWidth: 3,
     padding: 10,
     borderRadius: 10,
+    borderColor: "#033E3E",
+    backgroundColor: "#2B5050"
 },
 button_mod: {
     top: 560,
@@ -128,6 +131,26 @@ dropdown:{
     left:199,
     borderRadius:16,
     backgroundColor: "black"
+},
+center_container:{
+    position: "absolute",
+    top: 95,
+    flex: 1,
+    bottom: 50,
+    backgroundColor: "#033E3E"
+},
+button_card:{
+    marginTop: 37,
+    width: 322,
+    height: 86,
+    marginLeft: 22,
+    backgroundColor: "#2B5050",
+    borderRadius: 14
+},
+text_date:{
+    color: "#F5C106",
+    fontSize: 12,
+    marginLeft: 79,
 }
 });
 

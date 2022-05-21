@@ -6,9 +6,7 @@ import PhoneInput from 'react-phone-input-2';
 const Login = () => {
     return (
       <View style={styles.container}>
-        <Image style={styles.image_profil}
-        source={require("./../me.png")}
-      />
+      <Image style={styles.image_profil} source={require("./../me.png")}/>
       <Text style={styles.text_name}>Matthieu Juno</Text>
       <Text style={styles.text_mail}>juno.matthieu@gmail.com</Text>
       <Text style={styles.text_phone}>06 92 45 87 09</Text>
