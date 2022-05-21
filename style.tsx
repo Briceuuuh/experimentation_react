@@ -4,7 +4,9 @@ const styles = StyleSheet.create({
 container: {
     flex: 1,
     color: "black",
-    backgroundColor: "#033E3E"
+    backgroundColor: "#033E3E",
+    alignItems: "center",
+    justifyContent: "center"
 },
 image: {
     flex: 1,
@@ -117,6 +119,15 @@ image_profil:{
     height: 88,
     borderRadius: 16,
     alignSelf: "center"
+},
+dropdown:{
+    position: "absolute",
+    width: 113,
+    height: 39,
+    top:74,
+    left:199,
+    borderRadius:16,
+    backgroundColor: "black"
 }
 });
 

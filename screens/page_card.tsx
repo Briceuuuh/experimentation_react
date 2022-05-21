@@ -1,7 +1,8 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import {View, Text, StyleSheet, Button, TextInput, ScrollView, Image, ImageBackground, Pressable, Alert} from "react-native";
 import styles from './../style';
-import ImagePicker from 'react-native-image-crop-picker';
+import SelectDropdown from 'react-native-select-dropdown';
+const countries = ["Egypt", "Canada", "Australia", "Ireland"];
 
 const Card = () => {
     return (
@@ -9,6 +10,20 @@ const Card = () => {
         <Text style={styles.input}>
             Bienvenue sur mon carte
         </Text>
+      <View style={styles.dropdown}>
+          <SelectDropdown
+          data={countries}
+          onSelect={(selectedItem, index) => {
+            console.log(selectedItem, index)
+          }}
+          buttonTextAfterSelection={(selectedItem, index) => {
+            return selectedItem
+          }}
+          rowTextForSelection={(item, index) => {
+            return item
+          }}
+          />
+      </View>
       </View>
     );
   }

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import {View, Text, StyleSheet, Button, TextInput, Image, ScrollView, ImageBackground, Pressable, Alert} from "react-native";
 import styles from './../style';
 import PhoneInput from 'react-phone-input-2';
