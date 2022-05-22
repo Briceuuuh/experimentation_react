@@ -251,7 +251,7 @@ image_contact:{
 view_card:{
     width: 334,
     height: 154,
-    backgroundColor: "black",
+    backgroundColor: "#1C5151",
     borderRadius: 15,
 },
 view_map:{
@@ -266,7 +266,7 @@ view_fidele:{
     top: 570,
     width: 79,
     height: 74,
-    backgroundColor: "black",
+    backgroundColor: "#1C5151",
     borderRadius: 15,
 },
 view_view:{
@@ -275,7 +275,7 @@ view_view:{
     marginLeft: 125,
     width: 79,
     height: 74,
-    backgroundColor: "black",
+    backgroundColor: "#1C5151",
     borderRadius: 15,
 },
 view_point:{
@@ -284,15 +284,14 @@ view_point:{
     marginLeft: 252,
     width: 79,
     height: 74,
-    backgroundColor: "black",
+    backgroundColor: "#1C5151",
     borderRadius: 15,
 },
 view_recomp:{
-    //position: "absolute",
     top: 125,
     width: 334,
     height: 169,
-    backgroundColor: "black",
+    backgroundColor: "#1C5151",
     borderRadius: 15,
 },
 button_go:{
@@ -301,7 +300,66 @@ button_go:{
     height: 56,
     borderRadius: 15,
     backgroundColor: "#F5C106",
-}
+},
+text_point:{
+    top: 16,
+    fontWeight: "bold",
+    fontSize: 14,
+    textAlign: "center",
+    color: "#F5C106",
+},
+value_point:{
+    top: 20,
+    fontSize: 14,
+    textAlign: "center",
+    color: "white",
+},
+text_view_recomp:{
+    position: "absolute",
+    top: 22,
+    left: 16,
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "white",
+},
+value_view_after:{
+    position: "absolute",
+    top: 22,
+    left: 230,
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "white",
+},
+value_view_card:{
+    position: "absolute",
+    top: 22,
+    left: 171,
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "white",
+},
+text_dish:{
+    position: "absolute",
+    top: 56,
+    left: 16,
+    fontSize: 14,
+    color: "white",
+},
+image_coin:{
+    position: "absolute",
+    top: 21,
+    left: 297,
+    height: 18,
+    width: 18,
+},
+image_gift:{
+    position: "absolute",
+    height: 90,
+    width: 95,
+    top: 80,
+    borderBottomRightRadius: 65,
+    left: 275,
+},
 });
 
 export default styles;

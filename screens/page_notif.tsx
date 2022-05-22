@@ -26,6 +26,8 @@ const Notif = () => {
               showsVerticalScrollIndicator={false}
               showsHorizontalScrollIndicator={false}>
               <View style={styles.view_card}>
+              <Text style={styles.value_view_card}>Ma carte              3</Text>
+              <Image style={styles.image_coin} source={require("./../coin.png")}/>
               </View>
               <View style={styles.button_card}>
                 <Text style={styles.text_restaurant}>Le bistrot des pêcheurs</Text>
@@ -40,18 +42,35 @@ const Notif = () => {
               <View style={styles.view_map}>
               </View>
               <View style={styles.view_fidele}>
+                <Text style={styles.text_point}>833</Text>
+                <Text style={styles.value_point}>Fidèles</Text>
               </View>
               <View style={styles.view_view}>
+                <Text style={styles.text_point}>833</Text>
+                <Text style={styles.value_point}>Vues</Text>
               </View>
               <View style={styles.view_point}>
+                <Text style={styles.text_point}>833</Text>
+                <Text style={styles.value_point}>Points</Text>
               </View>
               <View style={styles.view_recomp}>
+                <Text style={styles.text_view_recomp}>Récompense</Text>
+                <Text style={styles.value_view_after}>Après 10</Text>
+                <Text style={styles.text_dish}>1 plat offert + une boisson de type soda</Text>
+                <Image style={styles.image_coin} source={require("./../coin.png")}/>
+                <Image style={styles.image_gift} source={require("./../gift.png")}/>
               </View>
               <Pressable onPress={() => Alert.alert("Le bistrot...")}>
                 <View style={styles.button_go}>
                   <Text style={styles.text_go}>Y aller</Text>
                 </View>
               </Pressable>
+              <Button title=''/>
+              <Button title=''/>
+              <Button title=''/>
+              <Button title=''/>
+              <Button title=''/>
+              <Button title=''/>
             </ScrollView>
           </View>
       </View>
