@@ -126,7 +126,7 @@ image_profil:{
 image_card:{
     position: "absolute",
     top: -15,
-    left: -15,
+    left: -12,
     width: 88,
     height: 88,
     borderRadius: 16,
@@ -136,7 +136,6 @@ center_container:{
     position: "absolute",
     top: 95,
     flex: 1,
-    bottom: 0,
     width: 345,
     backgroundColor: "#033E3E"
 },
@@ -144,7 +143,7 @@ button_card:{
     marginTop: 37,
     width: 322,
     height: 86,
-    marginLeft: 22,
+    marginLeft: 12,
     backgroundColor: "#2B5050",
     borderRadius: 14
 },
@@ -160,6 +159,19 @@ text_restaurant:{
     fontSize: 14,
     marginLeft: 90,
     fontWeight: "bold"
+},
+text_go:{
+    color: "#033E3E",
+    top: 20,
+    fontSize: 14,
+    alignSelf:"center",
+    fontWeight: "bold"
+},
+text_notif_restau:{
+    color: "white",
+    top: 20,
+    fontSize: 14,
+    marginLeft: 130,
 },
 container_drop:{
     position: "absolute",
@@ -209,14 +221,86 @@ container_center:{
     position: "absolute",
     top: 150,
     height: 615,
-    width: 345,
-    backgroundColor: "black"
+    width: 334,
+    backgroundColor: "#033E3E"
 },
 style_switch:{
     position: "absolute",
     left: 290,
     top: 35,
     borderColor: "white"
+},
+contact:{
+    fontWeight: "bold",
+    fontSize: 14,
+    top: 10,
+    marginLeft: 5,
+    color: "white",
+},
+coord:{
+    marginTop: -17,
+    marginLeft: 35,
+    color: "white",
+},
+image_contact:{
+    marginLeft: 5,
+    marginTop: 21,
+    height: 17,
+    width: 17,
+},
+view_card:{
+    width: 334,
+    height: 154,
+    backgroundColor: "black",
+    borderRadius: 15,
+},
+view_map:{
+    marginTop: 21,
+    width: 334,
+    height: 154,
+    backgroundColor: "black",
+    borderRadius: 15,
+},
+view_fidele:{
+    position: "absolute",
+    top: 570,
+    width: 79,
+    height: 74,
+    backgroundColor: "black",
+    borderRadius: 15,
+},
+view_view:{
+    position: "absolute",
+    top: 570,
+    marginLeft: 125,
+    width: 79,
+    height: 74,
+    backgroundColor: "black",
+    borderRadius: 15,
+},
+view_point:{
+    position: "absolute",
+    top: 570,
+    marginLeft: 252,
+    width: 79,
+    height: 74,
+    backgroundColor: "black",
+    borderRadius: 15,
+},
+view_recomp:{
+    //position: "absolute",
+    top: 125,
+    width: 334,
+    height: 169,
+    backgroundColor: "black",
+    borderRadius: 15,
+},
+button_go:{
+    top: 155,
+    width: 334,
+    height: 56,
+    borderRadius: 15,
+    backgroundColor: "#F5C106",
 }
 });
 
