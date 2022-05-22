@@ -6,27 +6,33 @@ import PhoneInput from 'react-phone-input-2';
 const Login = () => {
     return (
       <View style={styles.container}>
-      <Image style={styles.image_profil} source={require("./../me.png")}/>
-      <Text style={styles.text_name}>Matthieu Juno</Text>
-      <Text style={styles.text_mail}>juno.matthieu@gmail.com</Text>
-      <Text style={styles.text_phone}>06 92 45 87 09</Text>
-      <Text style={styles.text_password}>Mot de passe</Text>
-      <Text style={styles.text_hide}>***************</Text>
-      <Text style={styles.text_catego}>Catégorie favorite</Text>
-      <View style={styles.button_mod}>
-        <Button
-          title="Modifier"
-          color="black"
-          onPress={() => Alert.alert("Soon...")}
-        />
-      </View>
-        <View style={styles.button_dec}>
+        <Image style={styles.image_profil} source={require("./../me.png")}/>
+        <Text style={styles.text_name}>Matthieu Juno</Text>
+        <Text style={styles.text_mail}>juno.matthieu@gmail.com</Text>
+        <Text style={styles.text_phone}>06 92 45 87 09</Text>
+        <Text style={styles.text_password}>Mot de passe</Text>
+        <Text style={styles.text_hide}>***************</Text>
+        <Text style={styles.text_catego}>Catégorie favorite</Text>
+        <ScrollView style={styles.scrollview} horizontal={true}>
+          <Image style={styles.image_resto} source={require("./../eat.png")}/>
+          <Image style={styles.image_beauty} source={require("./../burger.png")}/>
+          <Text style={styles.text_view_scroll}>Restaurant</Text>
+          <Text style={styles.text_view_scroll2}>Beauté</Text>
+        </ScrollView>
+        <View style={styles.button_mod}>
           <Button
-            title="Deconnexion"
+            title="Modifier"
             color="black"
-            onPress={() => Alert.alert("Soon..")}
+            onPress={() => Alert.alert("Soon...")}
           />
         </View>
+          <View style={styles.button_dec}>
+            <Button
+              title="Deconnexion"
+              color="black"
+              onPress={() => Alert.alert("Soon..")}
+            />
+          </View>
       </View>
     );
   }

@@ -31,7 +31,7 @@ button_mod: {
     height: 56,
     paddingVertical: 10,
     borderRadius: 15,
-    backgroundColor: "#F5C106"
+    backgroundColor: "#F5C106",
 },
 button_dec: {
     top: 660,
@@ -41,7 +41,7 @@ button_dec: {
     height: 56,
     paddingVertical: 10,
     borderRadius: 15,
-    backgroundColor: "#9ABA4A"
+    backgroundColor: "#9ABA4A",
 },
 text_name: {
     position: "absolute",
@@ -360,6 +360,39 @@ image_gift:{
     borderBottomRightRadius: 65,
     left: 275,
 },
+image_beauty:{
+    position: "absolute",
+    height: 70,
+    width: 77,
+    left: 14,
+    borderRadius: 15,
+},
+image_resto:{
+    position: "absolute",
+    height: 70,
+    width: 77,
+    left: 101,
+    borderRadius: 15,
+},
+scrollview:{
+    top: 474,
+    bottom: 20,
+    height: 99,
+    width: 335,
+    marginBottom: 660,
+},
+text_view_scroll:{
+    position: "absolute",
+    left: 14,
+    top: 80,
+    color:"white"
+},
+text_view_scroll2:{
+    position: "absolute",
+    left: 101,
+    top: 80,
+    color:"white"
+}
 });
 
 export default styles;
