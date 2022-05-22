@@ -136,7 +136,8 @@ center_container:{
     position: "absolute",
     top: 95,
     flex: 1,
-    bottom: 50,
+    bottom: 0,
+    width: 345,
     backgroundColor: "#033E3E"
 },
 button_card:{
@@ -167,12 +168,55 @@ container_drop:{
     width: 113,
 },
 drop_down:{
-    position: "relative",
+    position: "absolute",
     width: 113,
     height: 39,
     borderRadius: 16,
     left: 117,
     backgroundColor: "#F5C106"
+},
+button_return:{
+    position: "absolute",
+    height: 32,
+    width: 32,
+    borderRadius: 50,
+    backgroundColor: "#F5C106",
+    left: 10,
+},
+text_retour:{
+    fontSize: 14,
+    color: "white",
+    left: 55,
+    fontWeight: "bold",
+    top: 9
+},
+text_notif:{
+    fontSize: 11,
+    color: "white",
+    left: 10,
+    fontWeight: "bold",
+    top: 30
+},
+container_top:{
+    position: "absolute",
+    top: 55,
+    height: 70,
+    width: 345,
+    marginBottom: 70,
+    backgroundColor: "#033E3E"
+},
+container_center:{
+    position: "absolute",
+    top: 150,
+    height: 615,
+    width: 345,
+    backgroundColor: "black"
+},
+style_switch:{
+    position: "absolute",
+    left: 290,
+    top: 35,
+    borderColor: "white"
 }
 });
 
