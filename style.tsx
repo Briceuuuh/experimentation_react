@@ -24,9 +24,8 @@ input: {
     backgroundColor: "#2B5050"
 },
 button_mod: {
-    top: 560,
+    top: "80%",
     position: "absolute",
-    margin: 28,
     width: 335,
     height: 56,
     paddingVertical: 10,
@@ -34,9 +33,8 @@ button_mod: {
     backgroundColor: "#F5C106",
 },
 button_dec: {
-    top: 660,
+    top: "90%",
     position: "absolute",
-    left: 28,
     width: 335,
     height: 56,
     paddingVertical: 10,
@@ -46,10 +44,6 @@ button_dec: {
 text_name: {
     position: "absolute",
     alignItems: "center",
-    textAlign: "center",
-    width: 120,
-    height: 24,
-    left: 135,
     top: 236,
     fontSize: 16,
     lineHeight: 24,
@@ -58,10 +52,6 @@ text_name: {
 text_mail: {
     position: "absolute",
     alignItems: "center",
-    textAlign: "center",
-    width: 190,
-    height: 21,
-    left: 99,
     top: 265,
     fontSize: 14,
     lineHeight: 21,
@@ -70,10 +60,6 @@ text_mail: {
 text_phone: {
     position: "absolute",
     alignItems: "center",
-    textAlign: "center",
-    width: 103,
-    height: 21,
-    left: 146,
     top: 288,
     fontSize: 14,
     lineHeight: 21,
@@ -82,10 +68,7 @@ text_phone: {
 text_password: {
     position: "absolute",
     alignItems: "center",
-    textAlign: "center",
-    width: 103,
-    height: 24,
-    left: 37,
+    left: "10%",
     top: 358,
     fontSize: 16,
     lineHeight: 24,
@@ -94,10 +77,7 @@ text_password: {
 text_hide: {
     position: "absolute",
     alignItems: "center",
-    textAlign: "center",
-    width: 103,
-    height: 18,
-    left: 37,
+    left:"10%",
     top: 387,
     fontSize: 12,
     lineHeight: 18,
@@ -106,10 +86,7 @@ text_hide: {
 text_catego: {
     position: "absolute",
     alignItems: "center",
-    textAlign: "center",
-    width: 141,
-    height: 24,
-    left: 37,
+    left: "10%",
     top: 435,
     fontSize: 16,
     lineHeight: 24,
@@ -141,10 +118,18 @@ center_container:{
     backgroundColor: "#033E3E"
 },
 button_card:{
-    marginTop: 37,
-    width: 322,
+    marginTop: "12%",
+    width: "92.5%",
     height: 86,
-    marginLeft: 12,
+    marginLeft: "5%",
+    backgroundColor: "#2B5050",
+    borderRadius: 14
+},
+button_card_notif:{
+    marginTop: "12%",
+    width: "95%",
+    height: 86,
+    marginLeft: "5%",
     backgroundColor: "#2B5050",
     borderRadius: 14
 },
@@ -163,8 +148,9 @@ text_restaurant:{
 },
 text_go:{
     color: "#033E3E",
-    top: 20,
+    top: 0,
     fontSize: 14,
+    marginTop: "6%",
     alignSelf:"center",
     fontWeight: "bold"
 },
@@ -211,17 +197,17 @@ text_notif:{
     top: 30
 },
 container_top:{
-    position: "absolute",
-    top: 55,
-    height: 70,
+    marginTop: "10%",
+    height: "5%",
     width: 345,
     marginBottom: 70,
     backgroundColor: "#033E3E"
 },
 container_center:{
-    position: "absolute",
-    top: 150,
-    height: 615,
+    /* position: "absolute",
+    top: 150, */
+    //marginTop: 100,
+    height: "80%",
     width: 334,
     backgroundColor: "#033E3E"
 },
@@ -232,20 +218,21 @@ style_switch:{
     borderColor: "white"
 },
 contact:{
+
     fontWeight: "bold",
     fontSize: 14,
     top: 10,
-    marginLeft: 5,
+    marginLeft: "2%",
     color: "white",
 },
 coord:{
     marginTop: -17,
-    marginLeft: 35,
+    marginLeft: "10%",
     color: "white",
 },
 image_contact:{
-    marginLeft: 5,
-    marginTop: 21,
+    marginLeft: "2%",
+    marginTop: "7%",
     height: 17,
     width: 17,
 },
@@ -256,47 +243,39 @@ view_card:{
     borderRadius: 15,
 },
 view_map:{
-    marginTop: 21,
+    marginTop: "7%",
     width: 334,
     height: 154,
     backgroundColor: "black",
     borderRadius: 15,
 },
 view_fidele:{
-    position: "absolute",
-    top: 570,
     width: 79,
     height: 74,
+    //marginLeft: 20,
     backgroundColor: "#1C5151",
     borderRadius: 15,
 },
 view_view:{
-    position: "absolute",
-    top: 570,
-    marginLeft: 125,
     width: 79,
     height: 74,
     backgroundColor: "#1C5151",
     borderRadius: 15,
 },
 view_point:{
-    position: "absolute",
-    top: 570,
-    marginLeft: 252,
     width: 79,
     height: 74,
     backgroundColor: "#1C5151",
     borderRadius: 15,
 },
 view_recomp:{
-    top: 125,
+    marginTop: "7%",
     width: 334,
     height: 169,
     backgroundColor: "#1C5151",
     borderRadius: 15,
 },
 button_go:{
-    top: 155,
     width: 334,
     height: 56,
     borderRadius: 15,
@@ -365,32 +344,30 @@ image_beauty:{
     position: "absolute",
     height: 70,
     width: 77,
-    left: 14,
+    left: 35,
     borderRadius: 15,
 },
 image_resto:{
     position: "absolute",
     height: 70,
     width: 77,
-    left: 101,
+    left: 135,
     borderRadius: 15,
 },
 scrollview:{
     top: 474,
-    bottom: 20,
     height: 99,
-    width: 335,
-    marginBottom: 660,
+    width: "100%",
 },
 text_view_scroll:{
     position: "absolute",
-    left: 14,
+    left: 35,
     top: 80,
     color:"white"
 },
 text_view_scroll2:{
     position: "absolute",
-    left: 101,
+    left: 135,
     top: 80,
     color:"white"
 },
@@ -413,7 +390,7 @@ view_how_piece:{
     width: 37,
     height: 37,
     top: -15,
-    left: 295,
+    left: 290,
     backgroundColor: "#0D6666",
     borderRadius: 100,
 },
@@ -431,6 +408,25 @@ image_how_coin:{
     width: 9,
     top: 14,
     left: 22,
+},
+image_house:{
+    position: "absolute",
+    top: 40,
+    left: 5,
+    height: 90,
+    width: 160,
+},
+view_row:{
+    marginTop: "7%",
+    flexDirection:"row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+},
+view_go:{
+    width: 334,
+    height: 56,
+    marginTop: "7%",
+    marginBottom: "7%",
 }
 });
 

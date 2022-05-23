@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, Button, TextInput, Image, ScrollView, ImageBackground, Pressable, Alert} from "react-native";
+import {View, Text, StyleSheet, Button, TextInput, Linking, Image, ScrollView, ImageBackground, Pressable, Alert} from "react-native";
 import styles from './../style';
 import PhoneInput from 'react-phone-input-2';
 
@@ -8,8 +8,8 @@ const Login = () => {
       <View style={styles.container}>
         <Image style={styles.image_profil} source={require("./../me.png")}/>
         <Text style={styles.text_name}>Matthieu Juno</Text>
-        <Text style={styles.text_mail}>juno.matthieu@gmail.com</Text>
-        <Text style={styles.text_phone}>06 92 45 87 09</Text>
+        <Text style={styles.text_mail} onPress={() => Linking.openURL('mailto:briceuh29@gmail.com')}>briceuh29@gmail.com</Text>
+        <Text style={styles.text_phone} onPress={()=>{Linking.openURL('tel:0693455956');}}>06 93 45 59 56</Text>
         <Text style={styles.text_password}>Mot de passe</Text>
         <Text style={styles.text_hide}>***************</Text>
         <Text style={styles.text_catego}>Catégorie favorite</Text>

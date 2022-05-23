@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { NavigationContainer} from '@react-navigation/native';
+import { DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 //import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -9,6 +9,7 @@ import Card from './screens/page_card';
 import Search from './screens/page_search';
 import Notif from './screens/page_notif';
 import { View } from 'react-native';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,7 +21,7 @@ const App = () => {
           tabBarStyle: {
             backgroundColor: '#035A5A',
             borderRadius: 24,
-            borderColor: '#033E3E',
+            borderColor: '#033E3E00',
           },
           headerShown: false,
           tabBarActiveTintColor: '#FDC80B',
