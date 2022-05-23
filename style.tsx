@@ -137,6 +137,7 @@ center_container:{
     top: 95,
     flex: 1,
     width: 345,
+    height: 1000,
     backgroundColor: "#033E3E"
 },
 button_card:{
@@ -392,6 +393,44 @@ text_view_scroll2:{
     left: 101,
     top: 80,
     color:"white"
+},
+image_coin_card:{
+    position: "absolute",
+    top: 55,
+    left: 295,
+    height: 18,
+    width: 18,
+},
+how_piece:{
+    position: "absolute",
+    fontWeight: "bold",
+    top: 55,
+    left: 275,
+    color: "white"
+},
+view_how_piece:{
+    position: "absolute",
+    width: 37,
+    height: 37,
+    top: -15,
+    left: 295,
+    backgroundColor: "#0D6666",
+    borderRadius: 100,
+},
+who_win_piece:{
+    position: "absolute",
+    color: "white",
+    fontSize: 10,
+    top: 12,
+    left: 7,
+    fontWeight: "bold"
+},
+image_how_coin:{
+    position: "absolute",
+    height: 9,
+    width: 9,
+    top: 14,
+    left: 22,
 }
 });
 

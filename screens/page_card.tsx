@@ -23,6 +23,12 @@ const Card = () => {
                   <Text style={styles.text_restaurant}>Le bistrot des pêcheurs</Text>
                   <Text style={styles.text_date}>{date}</Text>
                   <Image style={styles.image_card} source={require("./../eat.png")}/>
+                  <Image style={styles.image_coin_card} source={require("./../coin.png")}/>
+                  <Text style={styles.how_piece}>10</Text>
+                  <View style={styles.view_how_piece}>
+                  <Text style={styles.who_win_piece}>+1</Text>
+                  <Image style={styles.image_how_coin} source={require("./../coin.png")}/>
+                </View>
                 </View>
               </Pressable>
             <Pressable onPress={() => Alert.alert("Chez Jacky...")}>
@@ -30,6 +36,12 @@ const Card = () => {
                 <Text style={styles.text_restaurant}>Chez Jacky</Text>
                 <Text style={styles.text_date}>{date}</Text>
                 <Image style={styles.image_card} source={require("./../burger.png")}/>
+                <Image style={styles.image_coin_card} source={require("./../coin.png")}/>
+                <Text style={styles.how_piece}>2</Text>
+                <View style={styles.view_how_piece}>
+                  <Text style={styles.who_win_piece}>+1</Text>
+                  <Image style={styles.image_how_coin} source={require("./../coin.png")}/>
+                </View>
               </View>
             </Pressable>
             <Pressable onPress={() => Alert.alert("La buse...")}>
@@ -37,6 +49,12 @@ const Card = () => {
                 <Text style={styles.text_restaurant}>La Buse</Text>
                 <Text style={styles.text_date}>{date}</Text>
                 <Image style={styles.image_card} source={require("./../eat.png")}/>
+                <Image style={styles.image_coin_card} source={require("./../coin.png")}/>
+                <Text style={styles.how_piece}>10</Text>
+                <View style={styles.view_how_piece}>
+                <Text style={styles.who_win_piece}>+1</Text>
+                <Image style={styles.image_how_coin} source={require("./../coin.png")}/>
+                </View>
               </View>
             </Pressable>
             <Pressable onPress={() => Alert.alert("La bonne assiette...")}>
@@ -44,6 +62,12 @@ const Card = () => {
                 <Text style={styles.text_restaurant}>La bonne assiette</Text>
                 <Text style={styles.text_date}>{date}</Text>
                 <Image style={styles.image_card} source={require("./../burger.png")}/>
+                <Image style={styles.image_coin_card} source={require("./../coin.png")}/>
+                <Text style={styles.how_piece}>10</Text>
+                <View style={styles.view_how_piece}>
+                <Text style={styles.who_win_piece}>+1</Text>
+                <Image style={styles.image_how_coin} source={require("./../coin.png")}/>
+                </View>
               </View>
             </Pressable>
             <Pressable onPress={() => Alert.alert("Le bistrot...")}>
@@ -51,6 +75,12 @@ const Card = () => {
                 <Text style={styles.text_restaurant}>Le bistrot des pêcheurs</Text>
                 <Text style={styles.text_date}>{date}</Text>
                 <Image style={styles.image_card} source={require("./../eat.png")}/>
+                <Image style={styles.image_coin_card} source={require("./../coin.png")}/>
+                <Text style={styles.how_piece}>10</Text>
+                <View style={styles.view_how_piece}>
+                <Text style={styles.who_win_piece}>+1</Text>
+                <Image style={styles.image_how_coin} source={require("./../coin.png")}/>
+                </View>
               </View>
             </Pressable>
           </ScrollView>
