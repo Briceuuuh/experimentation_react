@@ -6,7 +6,6 @@ container: {
     color: "black",
     backgroundColor: "#033E3E",
     alignItems: "center",
-    justifyContent: "center"
 },
 image: {
     flex: 1,

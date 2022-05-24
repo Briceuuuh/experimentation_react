@@ -5,9 +5,9 @@ import styles from './../style';
 const Search = () => {
     return (
       <View style={styles.container}>
-        <Text style={styles.input}>
-          Bienvenue sur vos Recherches
-        </Text>
+        <View style={styles.input}>
+          <Text>Bienvenue sur vos Recherches</Text>
+        </View>
       </View>
     );
   }

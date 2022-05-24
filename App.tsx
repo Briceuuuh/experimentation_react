@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 //import Ionicons from 'react-native-vector-icons/Ionicons';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Login from './screens/page_login';
 import Drawer from './screens/page_drawer';

@@ -6,7 +6,7 @@ const Drawer = () => {
     return (
       <View style={styles.container}>
         <View style={styles.input}>
-        <Text>He is not present at the moment</Text>
+        <Text>Bienvenue sur ...</Text>
         </View>
       </View>
     );

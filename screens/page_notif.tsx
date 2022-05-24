@@ -1,15 +1,16 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, Image, Button, TextInput, ScrollView, ImageBackground, Pressable, Alert, Switch} from "react-native";
 import styles from './../style';
+import MapView from 'react-native-maps';
 
-const Notif = () => {
+const Notif = ({navigation}: {navigation: any}) => {
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     return (
       <View style={styles.container}>
         <View style={styles.container_top}>
             <View style={styles.button_return}>
-              <Button title='<' color="#033E3E" onPress={() => Alert.alert("Last Page...")}/>
+              <Button title='<' color="#033E3E" onPress={() => navigation.navigate("Mes cartes")}/>
             </View>
             <Text style={styles.text_retour}>Retour</Text>
             <Text style={styles.text_notif}>Recevoir des notification de ce commerce</Text>
@@ -27,19 +28,19 @@ const Notif = () => {
               showsHorizontalScrollIndicator={false}>
               <View style={styles.view_card}>
               <Text style={styles.value_view_card}>Ma carte              3</Text>
-              <Image style={styles.image_coin} source={require("./../coin.png")}/>
+              <Image style={styles.image_coin} source={require("./../images/coin.png")}/>
               </View>
               <View style={styles.button_card_notif}>
                 <Text style={styles.text_restaurant}>Le bistrot des pêcheurs</Text>
                 <Text style={styles.text_notif_restau}>Restaurant</Text>
-                <Image style={styles.image_card} source={require("./../eat.png")}/>
+                <Image style={styles.image_card} source={require("./../images/eat.png")}/>
               </View>
               <View >
               <Text style={styles.contact}>Contact</Text>
-              <Image style={styles.image_contact} source={require("./../phone.png")}/>
+              <Image style={styles.image_contact} source={require("./../images/phone.png")}/>
               <Text style={styles.coord}>02 62 56 00 90</Text>
-              <Image style={styles.image_contact} source={require("./../map.png")}/>
-              <Text style={styles.coord}>30 rue du Four à chaud, La Possession</Text>
+              <Image style={styles.image_contact} source={require("./../images/map.png")}/>
+              <Text style={styles.coord}>30 rue du Four à chaud, <Text style={{fontWeight:"bold"}}>La Possession</Text></Text>
               </View>
               <View style={styles.view_map}>
               </View>
@@ -61,8 +62,8 @@ const Notif = () => {
                 <Text style={styles.text_view_recomp}>Récompense</Text>
                 <Text style={styles.value_view_after}>Après 10</Text>
                 <Text style={styles.text_dish}>1 plat offert + une boisson de type soda</Text>
-                <Image style={styles.image_coin} source={require("./../coin.png")}/>
-                <Image style={styles.image_gift} source={require("./../gift.png")}/>
+                <Image style={styles.image_coin} source={require("./../images/coin.png")}/>
+                <Image style={styles.image_gift} source={require("./../images/gift.png")}/>
               </View>
               <View style={styles.view_go}>
                 <Pressable onPress={() => Alert.alert("Y aller...")}>
