@@ -15,6 +15,23 @@ function Edit({navigation}: {navigation: any}){
             </View>
             <Text style={styles.text_retour}>Retour</Text>
         </View>
+        <Image style={styles.image_profil} source={require("./../images/me.png")}/>
+        <Text style={{marginTop:"40%", fontWeight: "bold", color:"white", fontSize: 16}}>Informations</Text>
+        <View>
+        <TextInput></TextInput>
+        </View>
+        <Text style={{marginTop:"2%", color:"white", fontSize: 14}}>Nom</Text>
+        <View style={{width: 334, height: 56, backgroundColor: "#1C5151", borderRadius:11, marginTop:"1%"}}>
+        <TextInput style={{marginTop: "5.5%", marginLeft: "3%", color:"white"}} placeholder="Surname" placeholderTextColor="white"/>
+        </View>
+        <Text style={{marginTop:"2%", color:"white", fontSize: 14}}>Prénom</Text>
+        <View style={{width: 334, height: 56, backgroundColor: "#1C5151", borderRadius:11,  marginTop:"1%"}}>
+        <TextInput style={{marginTop: "5.5%", marginLeft: "3%", color:"white"}} placeholder="Name" placeholderTextColor="white"/>
+        </View>
+        <Text style={{marginTop:"2%", color:"white", fontSize: 14}}>Téléphone</Text>
+        <View style={{width: 334, height: 56, backgroundColor: "#1C5151", borderRadius:11,  marginTop:"1%"}}>
+        <TextInput style={{marginTop: "5.5%", marginLeft: "3%", color:"white"}} placeholder="NumberPhone" placeholderTextColor="white"/>
+        </View>
         <View style={styles.button_dec}>
         <Button
             title="Valider"
