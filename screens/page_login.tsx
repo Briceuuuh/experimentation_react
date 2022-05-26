@@ -10,6 +10,7 @@ import Edit from './edit_login';
 const Page_principal = ({navigation}: {navigation: any}) => {
     return (
       <View style={styles.container}>
+        <View style={styles.container_with_tab_bar}>
         <Image style={styles.image_profil} source={require("./../images/me.png")}/>
         <Text style={styles.text_name}>Matthieu Juno</Text>
         <Text style={styles.text_mail} onPress={() => Linking.openURL('mailto:briceuh29@gmail.com')}>briceuh29@gmail.com</Text>
@@ -28,15 +29,16 @@ const Page_principal = ({navigation}: {navigation: any}) => {
             title="Modifier"
             color="black"
             onPress={() => navigation.navigate("edit")}
-          />
+            />
         </View>
           <View style={styles.button_dec}>
             <Button
               title="Deconnexion"
               color="black"
               onPress={() => Alert.alert("Soon..")}
-            />
+              />
           </View>
+        </View>
       </View>
     );
   }

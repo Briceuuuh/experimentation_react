@@ -7,12 +7,16 @@ import styles from '../style';
 const Tab = createBottomTabNavigator();
 
 function Edit({navigation}: {navigation: any}){
+  const arraw = "<";
   return (
     <View style={styles.container}>
+        <View style={styles.container_with_tab_bar}>
         <View style={styles.container_top}>
+        <Pressable onPress={() => navigation.navigate("login")}>
             <View style={styles.button_return}>
-              <Button title='<' color="#033E3E" onPress={() => navigation.navigate("login")}/>
+              <Text style={{height: 18, width: 18, marginTop: 3,  marginLeft: 9, fontSize: 20}} >{arraw}</Text>
             </View>
+          </Pressable>
             <Text style={styles.text_retour}>Retour</Text>
         </View>
         <Image style={styles.image_profil} source={require("./../images/me.png")}/>
@@ -38,6 +42,7 @@ function Edit({navigation}: {navigation: any}){
             color="black"
             onPress={() => Alert.alert("Soon..")}
         />
+        </View>
         </View>
       </View>
   );

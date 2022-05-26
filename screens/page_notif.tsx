@@ -3,15 +3,20 @@ import {View, Text, StyleSheet, Image, Button, TextInput, ScrollView, ImageBackg
 import styles from './../style';
 import MapView from 'react-native-maps';
 
+
+
 const Notif = ({navigation}: {navigation: any}) => {
+    var arraw = "<";
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     return (
       <View style={styles.container}>
         <View style={styles.container_top}>
+          <Pressable onPress={() => navigation.navigate("Mes cartes")}>
             <View style={styles.button_return}>
-              <Button title='<' color="#033E3E" onPress={() => navigation.navigate("Mes cartes")}/>
+              <Text style={{height: 18, width: 18, marginTop: 3,  marginLeft: 9, fontSize: 20}}>{arraw}</Text>
             </View>
+          </Pressable>
             <Text style={styles.text_retour}>Retour</Text>
             <Text style={styles.text_notif}>Recevoir des notification de ce commerce</Text>
             <Switch style={styles.style_switch}
@@ -22,6 +27,7 @@ const Notif = ({navigation}: {navigation: any}) => {
               value={isEnabled}
             />
         </View>
+        <View style={styles.container_with_tab_bar}>
         <View style={styles.container_center}>
             <ScrollView
               showsVerticalScrollIndicator={false}
@@ -73,6 +79,7 @@ const Notif = ({navigation}: {navigation: any}) => {
                 </Pressable>
               </View>
             </ScrollView>
+            </View>
           </View>
       </View>
     );

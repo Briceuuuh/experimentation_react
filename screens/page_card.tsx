@@ -16,6 +16,7 @@ const Card = () => {
   ]);
   return (
       <View style={styles.container}>
+        <View style={styles.container_with_tab_bar}>
         <View style={styles.center_container}>
           <ScrollView>
               <Pressable onPress={() => Alert.alert("Le Bistrot...")}>
@@ -84,6 +85,7 @@ const Card = () => {
               </View>
             </Pressable>
           </ScrollView>
+          </View>
         </View>
         <View style={styles.container_drop}>
           <DropDownPicker style={styles.drop_down}

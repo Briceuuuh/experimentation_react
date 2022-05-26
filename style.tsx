@@ -7,11 +7,18 @@ container: {
     backgroundColor: "#033E3E",
     alignItems: "center",
 },
+container_with_tab_bar: {
+    width: "100%",
+    height:"92%",
+    color: "black",
+    backgroundColor: "#033E3E",
+    alignItems: "center",
+},
 image: {
     flex: 1,
 },
 input: {
-    top: 0,
+    marginTop:"50%",
     fontSize: 17,
     height: 55,
     width: 335,

@@ -23,6 +23,7 @@ const App = () => {
             backgroundColor: '#035A5A',
             borderRadius: 24,
             borderColor: '#033E3E00',
+            position: 'absolute',
           },
           headerShown: false,
           tabBarActiveTintColor: '#FDC80B',
