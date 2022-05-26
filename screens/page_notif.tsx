@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, Image, Button, TextInput, ScrollView, ImageBackground, Pressable, Alert, Switch} from "react-native";
 import styles from './../style';
+import LinearGradient from 'react-native-linear-gradient';
 import MapView from 'react-native-maps';
 
 
@@ -20,8 +21,8 @@ const Notif = ({navigation}: {navigation: any}) => {
             <Text style={styles.text_retour}>Retour</Text>
             <Text style={styles.text_notif}>Recevoir des notification de ce commerce</Text>
             <Switch style={styles.style_switch}
-              trackColor={{ false: "#033E3E", true: "#033E3E" }}
-              thumbColor={isEnabled ? "#F5C106" : "#033E3E"}
+              trackColor={{ false: "white", true: "#033E3E" }}
+              thumbColor={isEnabled ? "#F5C106" : "#035A5A"}
               ios_backgroundColor="#3e3e3e"
               onValueChange={toggleSwitch}
               value={isEnabled}
@@ -33,8 +34,18 @@ const Notif = ({navigation}: {navigation: any}) => {
               showsVerticalScrollIndicator={false}
               showsHorizontalScrollIndicator={false}>
               <View style={styles.view_card}>
+              <LinearGradient
+                colors={['#F5C106','#035A5A']}
+                style={styles.linearGradient}
+                start={{ x: 0.5, y: 0.0 }}
+                end={{ x: 0.5, y: 0.0 }}
+                locations={[0.3, 0.3]}
+              >
               <Text style={styles.value_view_card}>Ma carte              3</Text>
               <Image style={styles.image_coin} source={require("./../images/coin.png")}/>
+              <Image style={{position:"absolute", height: 25, width:25, left: 110, top: 14}} source={require("./../images/squirrel.png")}/>
+              <Image style={{position:"absolute", height: 120, width: 150, left: 10, top: 15}} source={require("./../images/house.png")}/>
+              </LinearGradient>
               </View>
               <View style={styles.button_card_notif}>
                 <Text style={styles.text_restaurant}>Le bistrot des pêcheurs</Text>

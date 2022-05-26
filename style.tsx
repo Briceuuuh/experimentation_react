@@ -218,10 +218,12 @@ container_center:{
     backgroundColor: "#033E3E"
 },
 style_switch:{
+    borderWidth: 3,
+    borderColor: "#F5C106",
     position: "absolute",
+    backgroundColor: "white",
     left: 290,
     top: 35,
-    borderColor: "white"
 },
 contact:{
 
@@ -258,7 +260,6 @@ view_map:{
 view_fidele:{
     width: 79,
     height: 74,
-    //marginLeft: 20,
     backgroundColor: "#1C5151",
     borderRadius: 15,
 },
@@ -433,7 +434,14 @@ view_go:{
     height: 56,
     marginTop: "7%",
     marginBottom: "7%",
-}
+},
+linearGradient: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 334,
+    height: 154,
+    borderRadius: 15,
+},
 });
 
 export default styles;
