@@ -1,7 +1,8 @@
 import React, {Component, useState} from 'react';
-import { DefaultTheme, NavigationContainer} from '@react-navigation/native';
+import { DefaultTheme, NavigationContainer, DarkTheme} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useColorScheme } from 'react-native-appearance';
 
 import Login from './screens/page_login';
 import Drawer from './screens/page_drawer';
@@ -13,8 +14,9 @@ import { Image, View } from 'react-native';
 const Tab = createBottomTabNavigator();
 
 const App = () => {
+  const scheme = useColorScheme();
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={scheme === "dark" ? DarkTheme : DefaultTheme}>
       <Tab.Navigator
         screenOptions={({route}) => ({
           tabBarStyle: {

@@ -136,7 +136,7 @@ button_card_notif:{
     width: "95%",
     height: 86,
     marginLeft: "5%",
-    backgroundColor: "#2B5050",
+    backgroundColor: "#1C5151",
     borderRadius: 14
 },
 text_date:{
