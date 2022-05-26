@@ -25,9 +25,7 @@ const App = () => {
           },
           headerShown: false,
           tabBarActiveTintColor: '#FDC80B',
-          tabBarInactiveTintColor: '#FFFFFF',
-        })}
-      >
+          tabBarInactiveTintColor: '#FFFFFF'})}>
         <Tab.Screen name="Mes cartes" component={Card} options={{
           tabBarIcon:({focused}) => (
             <Image source={require('./icon/card.png')}
@@ -36,9 +34,7 @@ const App = () => {
                     height:25,
                     tintColor: focused ? '#FDC80B' : '#FFFFFF',
                     transform: focused ? [{ rotate: '330deg'}] : [{ rotate: '0deg'}],
-                    top: focused ? -2: 0,
-            }}
-            />
+                    top: focused ? -2: 0}}/>
           ),
         }} />
         <Tab.Screen name="Rechercher" component={Search} options={{
@@ -49,9 +45,7 @@ const App = () => {
                     height: 25,
                     tintColor: focused ? '#FDC80B' : '#FFFFFF',
                     transform: focused ? [{ rotate: '330deg'}] : [{ rotate: '0deg'}],
-                    top: focused ? -2: 0,
-            }}
-            />
+                    top: focused ? -2: 0}}/>
           ),
         }}/>
         <Tab.Screen name=" " component={Drawer} options={{
@@ -60,11 +54,7 @@ const App = () => {
             resizeMode="contain"
             style={{width: focused ? 35 : 25,
                     height: focused ? 35 : 25,
-                    tintColor: focused ? '#FDC80B' : '#FFFFFF',
-                    //transform: focused ? [{ rotate: '330deg'}] : [{ rotate: '0deg'}],
-                    //top: focused ? -2: 0,
-            }}
-            />
+                    tintColor: focused ? '#FDC80B' : '#FFFFFF'}}/>
           ),
         }}/>
         <Tab.Screen name="Notification" component={Notif} options={{
@@ -75,9 +65,7 @@ const App = () => {
                     height:25,
                     tintColor: focused ? '#FDC80B' : '#FFFFFF',
                     transform: focused ? [{ rotate: '330deg'}] : [{ rotate: '0deg'}],
-                    top: focused ? -2: 0,
-            }}
-            />
+                    top: focused ? -2: 0}}/>
           ),
         }}/>
         <Tab.Screen name="Profil" component={Login} options={{
@@ -88,9 +76,7 @@ const App = () => {
                     height:25,
                     tintColor: focused ? '#FDC80B' : '#FFFFFF',
                     transform: focused ? [{ rotate: '350deg'}] : [{ rotate: '0deg'}],
-                    top: focused ? -2: 0,
-            }}
-            />
+                    top: focused ? -2: 0}}/>
           ),
         }}/>
       </Tab.Navigator>

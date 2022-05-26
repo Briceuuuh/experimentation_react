@@ -4,8 +4,6 @@ import styles from './../style';
 import LinearGradient from 'react-native-linear-gradient';
 import MapView from 'react-native-maps';
 
-
-
 const Notif = ({navigation}: {navigation: any}) => {
     var arraw = "<";
     const [isEnabled, setIsEnabled] = useState(false);

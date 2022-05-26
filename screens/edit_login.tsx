@@ -20,23 +20,43 @@ function Edit({navigation}: {navigation: any}){
             <Text style={styles.text_retour}>Retour</Text>
         </View>
         <Image style={styles.image_profil} source={require("./../images/me.png")}/>
-        <Text style={{marginTop:"40%", fontWeight: "bold", color:"white", fontSize: 16}}>Informations</Text>
-        <View>
-        <TextInput></TextInput>
-        </View>
-        <Text style={{marginTop:"2%", color:"white", fontSize: 14}}>Nom</Text>
+        <Text style={{marginTop:"40%",
+                      marginBottom: "5%",
+                      marginLeft: "-57%",
+                      fontWeight: "bold",
+                      color:"white",
+                      fontSize: 16}}>Informations</Text>
+        <Text style={{marginTop:"2%",
+                      marginLeft: "-73%",
+                      fontWeight:"bold",
+                      color:"white",
+                      fontSize: 14}}>Nom</Text>
         <View style={{width: 334, height: 56, backgroundColor: "#1C5151", borderRadius:11, marginTop:"1%"}}>
-        <TextInput style={{marginTop: "5.5%", marginLeft: "3%", color:"white"}} placeholder="Surname" placeholderTextColor="white"/>
+          <TextInput style={{marginTop: "5.5%", marginLeft: "3%", color:"white"}} placeholder="Surname" placeholderTextColor="white"/>
         </View>
-        <Text style={{marginTop:"2%", color:"white", fontSize: 14}}>Prénom</Text>
+        <Text style={{marginTop:"2%",
+                      marginLeft: "-68%",
+                      fontWeight:"bold",
+                      color:"white",
+                      fontSize: 14}}>Prénom</Text>
         <View style={{width: 334, height: 56, backgroundColor: "#1C5151", borderRadius:11,  marginTop:"1%"}}>
-        <TextInput style={{marginTop: "5.5%", marginLeft: "3%", color:"white"}} placeholder="Name" placeholderTextColor="white"/>
+          <TextInput style={{marginTop: "5.5%", marginLeft: "3%", color:"white"}} placeholder="Name" placeholderTextColor="white"/>
         </View>
-        <Text style={{marginTop:"2%", color:"white", fontSize: 14}}>Téléphone</Text>
+        <Text style={{marginTop:"2%",
+                      marginLeft: "-63%",
+                      fontWeight:"bold",
+                      color:"white",
+                      fontSize: 14}}>Téléphone</Text>
         <View style={{width: 334, height: 56, backgroundColor: "#1C5151", borderRadius:11,  marginTop:"1%"}}>
-        <TextInput style={{marginTop: "5.5%", marginLeft: "3%", color:"white"}} placeholder="NumberPhone" placeholderTextColor="white"/>
+          <TextInput style={{marginTop: "5.5%", marginLeft: "3%", color:"white"}} placeholder="NumberPhone" placeholderTextColor="white"/>
         </View>
-        <View style={styles.button_dec}>
+        <View style={{top: "90%",
+                    position: "absolute",
+                    width: 335,
+                    height: 56,
+                    paddingVertical: 10,
+                    borderRadius: 15,
+                    backgroundColor: "#F5C106",}}>
         <Button
             title="Valider"
             color="black"
