@@ -18,7 +18,7 @@ const App = () => {
   return (
     <NavigationContainer theme={scheme === "dark" ? DarkTheme : DefaultTheme}>
       <Tab.Navigator
-        screenOptions={({route}) => ({
+        screenOptions={({}) => ({
           tabBarStyle: {
             backgroundColor: '#035A5A',
             borderRadius: 24,
