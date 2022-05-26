@@ -45,8 +45,8 @@ const App = () => {
           tabBarIcon:({focused}) => (
             <Image source={require('./icon/search.png')}
             resizeMode="contain"
-            style={{width: focused ? 35 : 25,
-                    height: focused ? 35 : 25,
+            style={{width: 25,
+                    height: 25,
                     tintColor: focused ? '#FDC80B' : '#FFFFFF',
                     transform: focused ? [{ rotate: '330deg'}] : [{ rotate: '0deg'}],
                     top: focused ? -2: 0,
