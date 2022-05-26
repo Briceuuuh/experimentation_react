@@ -13,7 +13,7 @@ const Page_principal = ({navigation}: {navigation: any}) => {
         <View style={styles.container_with_tab_bar}>
         <Image style={styles.image_profil} source={require("./../images/me.png")}/>
         <Text style={styles.text_name}>Matthieu Juno</Text>
-        <Text style={styles.text_mail} onPress={() => Linking.openURL('mailto:briceuh29@gmail.com')}>briceuh29@gmail.com</Text>
+        <Text style={styles.text_mail}onPress={() => Linking.openURL('mailto:briceuh29@gmail.com')}>briceuh29@gmail.com</Text>
         <Text style={styles.text_phone} onPress={()=>{Linking.openURL('tel:0693455956');}}>06 93 45 59 56</Text>
         <Text style={styles.text_password}>Mot de passe</Text>
         <Text style={styles.text_hide}>***************</Text>
