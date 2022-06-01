@@ -1,7 +1,6 @@
-import React, {Component, useState} from 'react';
-import { DefaultTheme, NavigationContainer} from '@react-navigation/native';
+import React, { useState } from 'react';
+import { NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Login from './screens/page_login';
 import Drawer from './screens/page_drawer';
@@ -10,17 +9,32 @@ import Search from './screens/page_search';
 import Notif from './screens/page_notif';
 import { Image, View } from 'react-native';
 
+export const Context = React.createContext({
+  name: "guest",
+  setName: (newName: string) => {},
+  surname: "surname",
+  setSurname: (newName: string) => {},
+  phone: "nb",
+  setPhone: (newName: string) => {},
+  mail: "mail",
+  password: "",
+});
+
 const Tab = createBottomTabNavigator();
 
+
 const App = () => {
+  const [name, setName] = useState("Matthieu");
+  const [surname, setSurname] = useState("Juno");
+  const [phone, setPhone] = useState("06 92 45 87 09");
   return (
+    <Context.Provider value= {{name, setName, surname, setSurname, phone, setPhone, mail: "juno.matthieu@gmail.com", password: "password"}}>
     <NavigationContainer>
       <Tab.Navigator
-        screenOptions={({route}) => ({
+        screenOptions={({}) => ({
           tabBarStyle: {
             backgroundColor: '#035A5A',
             borderRadius: 24,
-            borderColor: '#033E3E00',
             position: 'absolute',
           },
           headerShown: false,
@@ -81,6 +95,7 @@ const App = () => {
         }}/>
       </Tab.Navigator>
     </NavigationContainer>
+    </Context.Provider>
   );
 };
 

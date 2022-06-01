@@ -416,6 +416,12 @@ image_how_coin:{
     top: 14,
     left: 22,
 },
+image_return:{
+    top: "18%",
+    left: "18%",
+    height: 18,
+    width: 18
+},
 image_house:{
     position: "absolute",
     top: 40,
@@ -442,6 +448,56 @@ linearGradient: {
     height: 154,
     borderRadius: 15,
 },
+button_validate: {
+    top: "90%",
+    position: "absolute",
+    width: 335,
+    height: 56,
+    paddingVertical: 10,
+    borderRadius: 15,
+    backgroundColor: "#F5C106",
+},
+text_infos: {
+    marginTop:"40%",
+    marginBottom: "5%",
+    marginLeft: "-57%",
+    fontWeight: "bold",
+    color:"white",
+    fontSize: 16
+},
+text_nom: {
+    marginTop:"2%",
+    marginLeft: "-73%",
+    fontWeight:"bold",
+    color:"white",
+    fontSize: 14
+},
+text_prenom: {
+    marginTop:"2%",
+    marginLeft: "-68%",
+    fontWeight:"bold",
+    color:"white",
+    fontSize: 14
+},
+text_nb_phone: {
+    marginTop:"2%",
+    marginLeft: "-63%",
+    fontWeight:"bold",
+    color:"white",
+    fontSize: 14
+},
+view_value: {
+    width: 334,
+    height: 56,
+    backgroundColor: "#1C5151",
+    borderRadius:11,
+    marginTop:"1%",
+},
+value_text_input: {
+    marginTop: "5.5%",
+    marginLeft: "3%",
+    color:"white"
+}
 });
 
 export default styles;

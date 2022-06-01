@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, Image, Button, TextInput, ScrollView, ImageBackground, Pressable, Alert, Switch} from "react-native";
-import styles from './../style';
+import styles from '../style';
 import LinearGradient from 'react-native-linear-gradient';
 import MapView from 'react-native-maps';
 
@@ -13,7 +13,7 @@ const Notif = ({navigation}: {navigation: any}) => {
         <View style={styles.container_top}>
           <Pressable onPress={() => navigation.navigate("Mes cartes")}>
             <View style={styles.button_return}>
-              <Text style={{height: 18, width: 18, marginTop: 3,  marginLeft: 9, fontSize: 20}}>{arraw}</Text>
+              <Image style={styles.image_return} source={require("./../icon/return.png")}/>
             </View>
           </Pressable>
             <Text style={styles.text_retour}>Retour</Text>

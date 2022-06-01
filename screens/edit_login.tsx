@@ -1,67 +1,57 @@
-import React, {useState} from 'react';
-import {View, Text, StyleSheet, Image, Button, TextInput, ScrollView, ImageBackground, Pressable, Alert} from "react-native";
+import React, {useContext, useState} from 'react';
+import {View, Text, NativeSyntheticEvent, TextInputChangeEventData, StyleSheet, Image, Button, TextInput, ScrollView, ImageBackground, Pressable, Alert} from "react-native";
 import { DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import styles from '../style';
 
+import { Context } from '../App';
+
 const Tab = createBottomTabNavigator();
 
-function Edit({navigation}: {navigation: any}){
-  const arraw = "<";
+const  Edit = ({navigation}: {navigation: any}) => {
+  const context = useContext(Context);
+  const [name, setName] = useState("Matthieu");
+  const [surname, setSurname] = useState("Juno");
+  const [phone, setPhone] = useState("06 92 45 87 09");
+  function set_context() {
+    context.setName(name);
+    context.setSurname(surname);
+    context.setPhone(phone);
+  }
   return (
     <View style={styles.container}>
         <View style={styles.container_with_tab_bar}>
         <View style={styles.container_top}>
         <Pressable onPress={() => navigation.navigate("login")}>
             <View style={styles.button_return}>
-              <Text style={{height: 18, width: 18, marginTop: 3,  marginLeft: 9, fontSize: 20}} >{arraw}</Text>
+            <Image style={styles.image_return} source={require("./../icon/return.png")}/>
             </View>
           </Pressable>
             <Text style={styles.text_retour}>Retour</Text>
         </View>
         <Image style={styles.image_profil} source={require("./../images/me.png")}/>
-        <Text style={{marginTop:"40%",
-                      marginBottom: "5%",
-                      marginLeft: "-57%",
-                      fontWeight: "bold",
-                      color:"white",
-                      fontSize: 16}}>Informations</Text>
-        <Text style={{marginTop:"2%",
-                      marginLeft: "-73%",
-                      fontWeight:"bold",
-                      color:"white",
-                      fontSize: 14}}>Nom</Text>
-        <View style={{width: 334, height: 56, backgroundColor: "#1C5151", borderRadius:11, marginTop:"1%"}}>
-          <TextInput style={{marginTop: "5.5%", marginLeft: "3%", color:"white"}} placeholder="Surname" placeholderTextColor="white"/>
+        <Text style={styles.text_infos}>Informations</Text>
+        <Text style={styles.text_nom}>Nom</Text>
+        <View style={styles.view_value}>
+          <TextInput style={styles.value_text_input}
+                    defaultValue={context.surname} placeholderTextColor="white"
+                    onChangeText={(val) => setSurname(val)}/>
         </View>
-        <Text style={{marginTop:"2%",
-                      marginLeft: "-68%",
-                      fontWeight:"bold",
-                      color:"white",
-                      fontSize: 14}}>Prénom</Text>
-        <View style={{width: 334, height: 56, backgroundColor: "#1C5151", borderRadius:11,  marginTop:"1%"}}>
-          <TextInput style={{marginTop: "5.5%", marginLeft: "3%", color:"white"}} placeholder="Name" placeholderTextColor="white"/>
+        <Text style={styles.text_prenom}>Prénom</Text>
+        <View style={styles.view_value}>
+          <TextInput style={styles.value_text_input}
+                    defaultValue={context.name} placeholderTextColor="white"
+                    onChangeText={(val) => setName(val)}/>
         </View>
-        <Text style={{marginTop:"2%",
-                      marginLeft: "-63%",
-                      fontWeight:"bold",
-                      color:"white",
-                      fontSize: 14}}>Téléphone</Text>
-        <View style={{width: 334, height: 56, backgroundColor: "#1C5151", borderRadius:11,  marginTop:"1%"}}>
-          <TextInput style={{marginTop: "5.5%", marginLeft: "3%", color:"white"}} placeholder="NumberPhone" placeholderTextColor="white"/>
+        <Text style={styles.text_nb_phone}>Téléphone</Text>
+        <View style={styles.view_value}>
+          <TextInput style={styles.value_text_input}
+                    defaultValue={context.phone} placeholderTextColor="white"
+                    onChangeText={(val) => setPhone(val)}/>
         </View>
-        <View style={{top: "90%",
-                    position: "absolute",
-                    width: 335,
-                    height: 56,
-                    paddingVertical: 10,
-                    borderRadius: 15,
-                    backgroundColor: "#F5C106",}}>
-        <Button
-            title="Valider"
-            color="black"
-            onPress={() => Alert.alert("Soon..")}
-        />
+        <View style={styles.button_validate}>
+        <Button title="Valider" color="black"
+              onPress={() => {set_context(); navigation.navigate("login")}} />
         </View>
         </View>
       </View>

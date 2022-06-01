@@ -1,20 +1,20 @@
-import React, {useState} from 'react';
-import {View, Text, StyleSheet, Button, TextInput, Linking, Image, ScrollView, ImageBackground, Pressable, Alert} from "react-native";
-import styles from './../style';
-import PhoneInput from 'react-phone-input-2';
-import { NavigationContainer } from '@react-navigation/native';
+import React, {useContext, useState} from 'react';
+import {View, Text, StyleSheet, Button, TextInput, Linking, Image, ScrollView, ImageBackground, Pressable, Alert, NativeModules} from "react-native";
+import styles from '../style';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Edit from './edit_login';
+import { Context } from '../App';
 
 const Page_principal = ({navigation}: {navigation: any}) => {
+    const context = useContext(Context);
     return (
       <View style={styles.container}>
         <View style={styles.container_with_tab_bar}>
         <Image style={styles.image_profil} source={require("./../images/me.png")}/>
-        <Text style={styles.text_name}>Matthieu Juno</Text>
-        <Text style={styles.text_mail}onPress={() => Linking.openURL('mailto:briceuh29@gmail.com')}>briceuh29@gmail.com</Text>
-        <Text style={styles.text_phone} onPress={()=>{Linking.openURL('tel:0693455956');}}>06 93 45 59 56</Text>
+        <Text style={styles.text_name}>{context.name} {context.surname}</Text>
+        <Text style={styles.text_mail}onPress={() => Linking.openURL(context.mail)}>{context.mail}</Text>
+        <Text style={styles.text_phone} onPress={()=>{Linking.openURL(context.phone);}}>{context.phone}</Text>
         <Text style={styles.text_password}>Mot de passe</Text>
         <Text style={styles.text_hide}>***************</Text>
         <Text style={styles.text_catego}>Catégorie favorite</Text>

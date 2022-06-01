@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, Button, TextInput, ScrollView, Image, ImageBackground, Pressable, Alert} from "react-native";
-import styles from './../style';
+import styles from '../style';
 import DropDownPicker from 'react-native-dropdown-picker';
 
 const now = new Date();
@@ -21,7 +21,7 @@ const Card = () => {
           <ScrollView>
               <Pressable onPress={() => Alert.alert("Le Bistrot...")}>
                 <View style={styles.button_card}>
-                  <Text style={styles.text_restaurant}>Le bistrot des pêcheurs</Text>
+                  <Text style={styles.text_restaurant}>places</Text>
                   <Text style={styles.text_date}>{date}</Text>
                   <Image style={styles.image_card} source={require("./../images/eat.png")}/>
                   <Image style={styles.image_coin_card} source={require("./../images/coin.png")}/>
@@ -63,6 +63,32 @@ const Card = () => {
                 <Text style={styles.text_restaurant}>La bonne assiette</Text>
                 <Text style={styles.text_date}>{date}</Text>
                 <Image style={styles.image_card} source={require("./../images/burger.png")}/>
+                <Image style={styles.image_coin_card} source={require("./../images/coin.png")}/>
+                <Text style={styles.how_piece}>10</Text>
+                <View style={styles.view_how_piece}>
+                <Text style={styles.who_win_piece}>+1</Text>
+                <Image style={styles.image_how_coin} source={require("./../images/coin.png")}/>
+                </View>
+              </View>
+            </Pressable>
+            <Pressable onPress={() => Alert.alert("Le bistrot...")}>
+              <View style={styles.button_card}>
+                <Text style={styles.text_restaurant}>Le bistrot des pêcheurs</Text>
+                <Text style={styles.text_date}>{date}</Text>
+                <Image style={styles.image_card} source={require("./../images/eat.png")}/>
+                <Image style={styles.image_coin_card} source={require("./../images/coin.png")}/>
+                <Text style={styles.how_piece}>10</Text>
+                <View style={styles.view_how_piece}>
+                <Text style={styles.who_win_piece}>+1</Text>
+                <Image style={styles.image_how_coin} source={require("./../images/coin.png")}/>
+                </View>
+              </View>
+            </Pressable>
+            <Pressable onPress={() => Alert.alert("Le bistrot...")}>
+              <View style={styles.button_card}>
+                <Text style={styles.text_restaurant}>Le bistrot des pêcheurs</Text>
+                <Text style={styles.text_date}>{date}</Text>
+                <Image style={styles.image_card} source={require("./../images/eat.png")}/>
                 <Image style={styles.image_coin_card} source={require("./../images/coin.png")}/>
                 <Text style={styles.how_piece}>10</Text>
                 <View style={styles.view_how_piece}>
