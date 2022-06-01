@@ -10,9 +10,9 @@ const Tab = createBottomTabNavigator();
 
 const  Edit = ({navigation}: {navigation: any}) => {
   const context = useContext(Context);
-  const [name, setName] = useState("Matthieu");
-  const [surname, setSurname] = useState("Juno");
-  const [phone, setPhone] = useState("06 92 45 87 09");
+  const [name, setName] = useState(context.name);
+  const [surname, setSurname] = useState(context.surname);
+  const [phone, setPhone] = useState(context.phone);
   function set_context() {
     context.setName(name);
     context.setSurname(surname);
