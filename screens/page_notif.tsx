@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, Image, Button, TextInput, ScrollView, ImageBackground, Pressable, Alert, Switch} from "react-native";
 import styles from '../style';
 import LinearGradient from 'react-native-linear-gradient';
-import MapView from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
+
+
 
 const Notif = ({navigation}: {navigation: any}) => {
     var arraw = "<";
@@ -57,8 +59,21 @@ const Notif = ({navigation}: {navigation: any}) => {
               <Image style={styles.image_contact} source={require("./../images/map.png")}/>
               <Text style={styles.coord}>30 rue du Four à chaud, <Text style={{fontWeight:"bold"}}>La Possession</Text></Text>
               </View>
-              <View style={styles.view_map}>
-              </View>
+              <MapView style={styles.view_map}
+                initialRegion={{
+                  latitude: -20.964126,
+                  longitude: 55.331079,
+                  latitudeDelta: 0.0025,
+                  longitudeDelta: 0.0025,
+                }}>
+                  <Marker
+                  coordinate={{latitude: -20.964126, longitude: 55.331079}}
+                  title="Le bistrot des pêcheurs"
+                  description='Restauration'
+                  >
+                    <Image style={{height:18, width: 18}} source={require("./../images/map.png")}/>
+                  </Marker>
+                </MapView>
               <View style={styles.view_row}>
                 <View style={styles.view_fidele}>
                   <Text style={styles.text_point}>833</Text>
