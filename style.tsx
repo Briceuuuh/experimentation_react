@@ -116,18 +116,19 @@ image_card:{
     opacity: 1,
 },
 center_container:{
-    position: "absolute",
-    top: 95,
+    top: "16%",
     flex: 1,
     width: 345,
-    height: 1000,
+    height: 100,
+    marginBottom: "35%",
     backgroundColor: "#033E3E"
 },
 button_card:{
-    marginTop: "12%",
+    marginTop: "6%",
     width: "92.5%",
     height: 86,
     marginLeft: "5%",
+    marginBottom: "6%",
     backgroundColor: "#2B5050",
     borderRadius: 14
 },
@@ -136,7 +137,7 @@ button_card_notif:{
     width: "95%",
     height: 86,
     marginLeft: "5%",
-    backgroundColor: "#2B5050",
+    backgroundColor: "#1C5151",
     borderRadius: 14
 },
 text_date:{

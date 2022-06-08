@@ -49,6 +49,7 @@ const Notif = ({navigation}: {navigation: any}) => {
               </View>
               <View style={styles.button_card_notif}>
                 <Text style={styles.text_restaurant}>Le bistrot des pêcheurs</Text>
+                <Image style={{position:"absolute", height: 28, width: 35, left: "28,5%", top: "36%", borderRadius: 8}} source={require("./../images/dish.png")}/>
                 <Text style={styles.text_notif_restau}>Restaurant</Text>
                 <Image style={styles.image_card} source={require("./../images/eat.png")}/>
               </View>
