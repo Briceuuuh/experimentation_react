@@ -33,7 +33,7 @@ const SignUp = ({navigation}: {navigation: any}) =>  {
                     <Pressable style={signup.press}
                         onPress={() => {if (password === confirmpassword) {auth()
                             .createUserWithEmailAndPassword(email, password).then(() => {
-                                Alert.alert('Compte crée && Connecté');
+                                Alert.alert('Compte créée && Connecté');
                                 }).catch(error => {if (error.code === 'auth/email-already-in-use')
                                                         Alert.alert('Email address is already used!');
                                                     if (error.code === 'auth/invalid-email')

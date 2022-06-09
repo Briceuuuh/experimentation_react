@@ -35,7 +35,7 @@ const Page_principal = ({navigation}: {navigation: any}) => {
             <Button
               title="Deconnexion"
               color="black"
-              onPress={() => Alert.alert("Soon..")}
+              onPress={() => navigation.navigate(" ")}
               />
           </View>
         </View>
