@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import {View, Text, StyleSheet, Button, TextInput, Linking, Image, ScrollView, ImageBackground, Pressable, Alert, NativeModules} from "react-native";
 import styles from '../style';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -47,8 +47,7 @@ const Page_principal = ({navigation}: {navigation: any}) => {
 
   function Login() {
     return (
-          <Stack.Navigator initialRouteName="login"
-          screenOptions={{
+          <Stack.Navigator initialRouteName="login" screenOptions={{
             headerShown: false,
           }} >
           <Stack.Screen name="login" component={Page_principal} />

@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavigationContainer} from '@react-navigation/native';
+import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
 import Login from './screens/page_login';
 import Drawer from './screens/page_drawer';
 import Card from './screens/page_card';
 import Search from './screens/page_search';
 import Notif from './screens/page_notif';
-import { Image, View } from 'react-native';
+import { Image } from 'react-native';
+import  Connect from "./auth/auth"
 
 export const Context = React.createContext({
   name: "guest",
@@ -22,11 +23,27 @@ export const Context = React.createContext({
 
 const Tab = createBottomTabNavigator();
 
-
-const App = () => {
+const App = ({navigation}: {navigation: any}) => {
   const [name, setName] = useState("Matthieu");
   const [surname, setSurname] = useState("Juno");
   const [phone, setPhone] = useState("06 92 45 87 09");
+  const [user, setUser] = useState<FirebaseAuthTypes.User | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    auth().onAuthStateChanged(userState => {
+      setUser(userState);
+      if (loading) {
+        setLoading(false);
+      }
+    });
+  }, []);
+
+  if (!user) {
+    return <NavigationContainer>
+            <Connect/>
+          </NavigationContainer>
+  }
   return (
     <Context.Provider value= {{name, setName, surname, setSurname, phone, setPhone, mail: "juno.matthieu@gmail.com", password: "password"}}>
     <NavigationContainer>
