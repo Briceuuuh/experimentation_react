@@ -22,7 +22,7 @@ const Drawer = () => {
   return (
     <View style={test.container}>
       <View style={test.style_view}>
-        <Text style={test.inputext}>Welcome {user.email}</Text>
+        <Text style={test.inputext}>Bienvenue {user.email}</Text>
       </View>
       <View style={test.button_dec}>
       <Button title='Se Déconnecter' color={"black"} onPress={() => {auth().signOut()}}/>
