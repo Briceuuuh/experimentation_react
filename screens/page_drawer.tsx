@@ -22,7 +22,8 @@ const Drawer = () => {
   return (
     <View style={test.container}>
       <View style={test.style_view}>
-        <Text style={test.inputext}>Bienvenue {user.email}</Text>
+        <Text style={test.inputext}>Bienvenue</Text>
+        <Text style={test.inputext}>{user.email}</Text>
       </View>
       <View style={test.button_dec}>
       <Button title='Se Déconnecter' color={"black"} onPress={() => {auth().signOut()}}/>
@@ -43,7 +44,7 @@ const test = StyleSheet.create({
   style_view: {
     marginTop: "15%",
     width: "90%",
-    height: "5%",
+    height: "6.5%",
     fontSize: 20,
     textAlign: "center",
     paddingVertical: "2%",
@@ -54,7 +55,7 @@ const test = StyleSheet.create({
   },
   inputext: {
     color: "white",
-    fontSize: 20,
+    fontSize: 15,
     paddingVertical: "0%",
   },
   button_dec: {
