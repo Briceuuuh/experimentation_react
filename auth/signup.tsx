@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth'
-import {Text,  Image, Linking ,View, Button, TextInput, Alert, Pressable, StyleSheet } from "react-native"
+import {Text, TouchableOpacity, Image, Linking ,View, Button, TextInput, Alert, Pressable, StyleSheet } from "react-native"
 
 const SignUp = ({navigation}: {navigation: any}) =>  {
     const [email, setEmail] = useState<string>('');
@@ -12,37 +12,37 @@ const SignUp = ({navigation}: {navigation: any}) =>  {
                 <Text style={signup.text_welcome}>Nouveau ?</Text>
             </View>
             <View style={signup.container_form}>
-                    <Text style={signup.text_infos}>S'inscrire</Text>
-                    <Text style={signup.text}>Email</Text>
-                    <View style={signup.view_value}>
-                        <TextInput style={signup.value_text_input} placeholder="name@exemple.com"
-                        placeholderTextColor="white" onChangeText={(val) => setEmail(val)}/>
-                    </View>
-                    <Text style={signup.text}>Mot de Passe</Text>
-                    <View style={signup.view_value}>
-                        <TextInput style={signup.value_text_input} placeholder="Password" secureTextEntry
-                            placeholderTextColor="white" onChangeText={(val) => setPassword(val)}/>
-                    </View>
-                    <Text style={signup.text}>Confirmer mot de passe</Text>
-                    <View style={signup.view_value}>
-                        <TextInput style={signup.value_text_input} placeholder="Password" secureTextEntry
-                            placeholderTextColor="white" onChangeText={(val) => setConfirmPassword(val)}/>
-                    </View>
-                    <Text style={signup.text_subscribe}
-                        onPress={() => navigation.navigate("sigin")}>Se connecter</Text>
-                    <Pressable style={signup.press}
-                        onPress={() => {if (password === confirmpassword) {auth()
-                            .createUserWithEmailAndPassword(email, password).then(() => {
-                                Alert.alert('Compte créée && Connecté');
-                                }).catch(error => {if (error.code === 'auth/email-already-in-use')
-                                                        Alert.alert('Email address is already used!');
-                                                    if (error.code === 'auth/invalid-email')
-                                                        Alert.alert('Email address not valid!');
-                                                    console.error(error);
-                                                    });
-                            } else Alert.alert("Mot de passe différent")}}>
-                            <Text style={signup.text_connect}>S'inscrire</Text>
-                    </Pressable>
+                <Text style={signup.text_infos}>S'inscrire</Text>
+                <Text style={signup.text}>Email</Text>
+                <View style={signup.view_value}>
+                    <TextInput style={signup.value_text_input} placeholder="name@exemple.com"
+                    placeholderTextColor="white" onChangeText={(val) => setEmail(val)}/>
+                </View>
+                <Text style={signup.text}>Mot de Passe</Text>
+                <View style={signup.view_value}>
+                    <TextInput style={signup.value_text_input} placeholder="Password" secureTextEntry
+                        placeholderTextColor="white" onChangeText={(val) => setPassword(val)}/>
+                </View>
+                <Text style={signup.text}>Confirmer mot de passe</Text>
+                <View style={signup.view_value}>
+                    <TextInput style={signup.value_text_input} placeholder="Password" secureTextEntry
+                        placeholderTextColor="white" onChangeText={(val) => setConfirmPassword(val)}/>
+                </View>
+                <Text style={signup.text_subscribe}
+                    onPress={() => navigation.navigate("sigin")}>Se connecter</Text>
+                <TouchableOpacity style={signup.press}
+                    onPress={() => {if (password === confirmpassword) {auth()
+                        .createUserWithEmailAndPassword(email, password).then(() => {
+                            Alert.alert('Compte créée && Connecté');
+                            }).catch(error => {if (error.code === 'auth/email-already-in-use')
+                                                    Alert.alert('Email address is already used!');
+                                                if (error.code === 'auth/invalid-email')
+                                                    Alert.alert('Email address not valid!');
+                                                console.error(error);
+                                                });
+                        } else Alert.alert("Mot de passe différent")}}>
+                    <Text style={signup.text_connect}>S'inscrire</Text>
+                </TouchableOpacity>
             </View>
         </View>
     )
@@ -68,18 +68,19 @@ const signup = StyleSheet.create({
       justifyContent: "center"
     },
     text_connect: {
-        fontWeight: "bold",
-        color: "white",
         fontSize: 20,
-        marginTop: "4.5%",
-        marginLeft: "37%"
+        color: "white",
+        fontWeight: "bold",
+        alignSelf: "center",
+        textTransform: "uppercase",
     },
     press: {
-        backgroundColor: "#F5C106",
         marginTop: "91%",
+        backgroundColor: "#F5C106",
         borderRadius: 20,
+        paddingVertical: 17,
         width: "100%",
-        height: "8%"
+        height: "8%",
     },
     text_infos: {
         marginTop:"6%",

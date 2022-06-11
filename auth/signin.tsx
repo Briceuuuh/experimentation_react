@@ -3,7 +3,7 @@ import { NavigationContainer} from '@react-navigation/native';
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Context } from "../App";
-import {Text,  Image, Linking ,View, Button, TextInput, Alert, Pressable, StyleSheet } from "react-native"
+import {Text,  Image, Linking, TouchableOpacity ,View, Button, TextInput, Alert, Pressable, StyleSheet } from "react-native"
 
 const SignIn = ({navigation}: {navigation: any}) =>  {
     const [email, setEmail] = useState<string>('');
@@ -27,10 +27,9 @@ const SignIn = ({navigation}: {navigation: any}) =>  {
                     </View>
                     <Text style={sigin.text_subscribe}
                         onPress={() => navigation.navigate("signup")}>S'inscrire</Text>
-                    <Pressable style={sigin.press}
-                        onPress={() => {auth().signInWithEmailAndPassword(email, password)}}>
-                            <Text style={sigin.text_connect}>Se Connecter</Text>
-                    </Pressable>
+                    <TouchableOpacity style={sigin.press} onPress={() => {auth().signInWithEmailAndPassword(email, password)}}>
+                        <Text style={sigin.text_connect}>Se Connecter</Text>
+                    </TouchableOpacity>
             </View>
         </View>
     )
@@ -50,20 +49,6 @@ const sigin = StyleSheet.create({
         width: "85%",
         height: "84%",
         alignItems: "center"
-    },
-    text_connect: {
-        fontWeight: "bold",
-        color: "white",
-        fontSize: 20,
-        marginTop: "4.5%",
-        marginLeft: "30%"
-    },
-    press: {
-        backgroundColor: "#F5C106",
-        marginTop: "120%",
-        borderRadius: 20,
-        width: "100%",
-        height: "8%"
     },
     inputext: {
       width: "80%",
@@ -115,5 +100,20 @@ const sigin = StyleSheet.create({
         fontSize:40,
         fontWeight: "bold",
         color:"white"
+    },
+    press: {
+        marginTop: "120%",
+        backgroundColor: "#F5C106",
+        borderRadius: 20,
+        paddingVertical: 17,
+        width: "100%",
+        height: "8%",
+      },
+    text_connect: {
+        fontSize: 20,
+        color: "white",
+        fontWeight: "bold",
+        alignSelf: "center",
+        textTransform: "uppercase",
     }
   })
