@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth'
-import {Text, TouchableOpacity, Image, Linking ,View, Button, TextInput, Alert, Pressable, StyleSheet } from "react-native"
+import {Text, TouchableOpacity ,View, TextInput, Alert, StyleSheet } from "react-native"
 
 const SignUp = ({navigation}: {navigation: any}) =>  {
     const [email, setEmail] = useState<string>('');

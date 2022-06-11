@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { NavigationContainer} from '@react-navigation/native';
-import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth'
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Context } from "../App";
-import {Text,  Image, Linking, TouchableOpacity ,View, Button, TextInput, Alert, Pressable, StyleSheet } from "react-native"
+import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
+import {Text, TouchableOpacity ,View, TextInput, StyleSheet } from "react-native"
 
 const SignIn = ({navigation}: {navigation: any}) =>  {
     const [email, setEmail] = useState<string>('');

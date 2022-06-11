@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, RefreshControl, Button, TextInput, ScrollView, Image, ImageBackground, Pressable, Alert, FlatList, StyleSheet} from "react-native";
 import styles from '../style';
-import { SearchBar } from 'react-native-screens';
 import DropDownPicker from 'react-native-dropdown-picker';
 
 const now = new Date();
@@ -41,25 +40,25 @@ const Card = () => {
         <View style={styles.center_container}>
             <FlatList data={data}
             showsVerticalScrollIndicator={false}
-                      refreshControl={
-                        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-                      }
-                      renderItem={() => (
-                        <Pressable onPress={() => Alert.alert("Go to this restaurant")}>
-                        <View style={styles.button_card}>
-                          <Text style={styles.text_restaurant}>{valeur.name[GetRandom(valeur.nb.length)]}</Text>
-                          <Text style={styles.text_date}>{date}</Text>
-                          <Image style={styles.image_card} source={valeur.image[GetRandom(valeur.image.length)]}/>
-                          <Image style={styles.image_coin_card} source={require("./../images/coin.png")}/>
-                          <Text style={styles.how_piece}>{valeur.nb[GetRandom(valeur.nb.length)]}</Text>
-                          <View style={styles.view_how_piece}>
-                          <Text style={styles.who_win_piece}>+1</Text>
-                          <Image style={styles.image_how_coin} source={require("./../images/coin.png")}/>
-                        </View>
-                        </View>
-                      </Pressable>
-                      )}
-                      >
+              refreshControl={
+                <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+              }
+              renderItem={() => (
+                <Pressable onPress={() => Alert.alert("Go to this restaurant")}>
+                <View style={styles.button_card}>
+                  <Text style={styles.text_restaurant}>{valeur.name[GetRandom(valeur.nb.length)]}</Text>
+                  <Text style={styles.text_date}>{date}</Text>
+                  <Image style={styles.image_card} source={valeur.image[GetRandom(valeur.image.length)]}/>
+                  <Image style={styles.image_coin_card} source={require("./../images/coin.png")}/>
+                  <Text style={styles.how_piece}>{valeur.nb[GetRandom(valeur.nb.length)]}</Text>
+                  <View style={styles.view_how_piece}>
+                  <Text style={styles.who_win_piece}>+1</Text>
+                  <Image style={styles.image_how_coin} source={require("./../images/coin.png")}/>
+                </View>
+                </View>
+              </Pressable>
+              )}
+              >
             </FlatList>
           </View>
         </View>

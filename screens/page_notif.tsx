@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, Image, Button, TextInput, ScrollView, ImageBackground, Pressable, Alert, Switch} from "react-native";
+import {View, Text, Image, ScrollView, Pressable, Alert, Switch} from "react-native";
 import styles from '../style';
 import LinearGradient from 'react-native-linear-gradient';
 import MapView, { Marker } from 'react-native-maps';

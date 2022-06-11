@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text, StyleSheet, Button} from "react-native";
-import styles from '../style';
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
 
 const Drawer = () => {

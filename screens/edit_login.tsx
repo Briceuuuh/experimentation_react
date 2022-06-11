@@ -1,6 +1,5 @@
 import React, {useContext, useState} from 'react';
 import {View, Text, NativeSyntheticEvent, TextInputChangeEventData, StyleSheet, Image, Button, TextInput, ScrollView, ImageBackground, Pressable, Alert} from "react-native";
-import { DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import styles from '../style';
 
